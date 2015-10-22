@@ -1,0 +1,29 @@
+{
+	"manifest_version": 2,
+
+	"name": "Your shuttle is coming! ",
+	"description": "This extension notifies you that you shuttle is coming",
+	"version": "1.0",
+
+	"background": {
+		"scripts": ["popup.js"],
+		"persistent": false
+	},
+
+	"page_action": {
+		"default_icon": "bus_64.png",
+		"default_title": "Your shuttle is coming", 
+		"default_popup": "popup.html"
+	},
+
+	"icons": {
+		"64": "bus_64.png",
+		"128": "bus_128.png"
+	},
+
+	"permissions": [
+		"declarativeContent",
+		"activeTab",
+		"https://ajax.googleapis.com/"
+	]
+}
