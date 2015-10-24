@@ -10,7 +10,7 @@ checkState();
 
 function checkState() {
 
-  var text = document.getElementsByClassName('views-field-state')[0].innerText;
+  var text = document.getElementsByClassName('views-field-state')[1].innerText;
   
   if (text == 'Waiting') {
     notifyMe();
@@ -18,7 +18,7 @@ function checkState() {
   else if (text == 'Online Request') {
     setTimeout(function() {
       location.reload();
-    }, 15000);
+    }, 5000);
   }
 
 }
@@ -39,8 +39,8 @@ function notifyMe() {
       body: "Hey, your shuttle is comming! :)",
     });
 
-    notification.onclick = function () {
-      window.open("http://stackoverflow.com/a/13328397/1269037");      
-    };
+    // notification.onclick = function () {
+    //   window.open("http://www.google.com");      
+    // };
   }
 }

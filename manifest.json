@@ -3,7 +3,7 @@
 
 	"name": "Don't miss your shuttle",
 	"description": "This extension will notify you when your shuttle is coming",
-	"version": "1.0",
+	"version": "1.1",
 
 	"background": {
 		"scripts": ["background.js"],
@@ -12,8 +12,7 @@
 
 	"page_action": {
 		"default_icon": "bus_64.png",
-		"default_title": "I will notify you when your shuttle is coming! :)", 
-		"default_popup": "popup.html"
+		"default_title": "I will notify you when your shuttle is coming! :)"
 	},
 
 	"icons": {
@@ -23,13 +22,12 @@
 
 	"permissions": [
 		"declarativeContent",
-		"activeTab",
-		"https://ajax.googleapis.com/"
+		"activeTab"
 	],
 	
 	"content_scripts": [
 		{
-			"matches": ["*://shuttle.brown.edu/*"],
+			"matches": ["*://shuttle.brown.edu/user*"],
 			"js": ["notifyme.js"]
 		}
 	]
