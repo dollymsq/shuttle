@@ -12,7 +12,7 @@ chrome.runtime.onInstalled.addListener(function() {
           // That fires when a page's URL contains the 'shuttle.brown.edu/user' ...
           conditions: [
             new chrome.declarativeContent.PageStateMatcher({
-               pageUrl: { urlContains: "shuttle.brown.edu/user" },
+               pageUrl: { urlContains: "shuttle.brown.edu/" },
             })
           ],
           // And shows the extension's page action.
